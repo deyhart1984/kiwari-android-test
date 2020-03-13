@@ -1,0 +1,95 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.realtimechat.app"
+        minSdkVersion 18
+        targetSdkVersion 28
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = [ 'src/main/res/layouts/splash',
+                            'src/main/res/layouts/main',
+                            'src/main/res/layouts/users',
+                            'src/main/res/layouts/other',
+                            'src/main/res'
+            ]
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Kotlin
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // Android Support libraries
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    //Android Test
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // Multidex
+    implementation "com.android.support:multidex:1.0.3"
+
+    // Firebanse
+    implementation 'com.google.firebase:firebase-core:9.2.0'
+    implementation 'com.google.firebase:firebase-database:9.2.0'
+    implementation 'com.firebase:firebase-client-android:2.3.1'
+
+    // Material dialog
+    implementation "com.afollestad.material-dialogs:core:0.9.5.0"
+
+    // Network
+    implementation 'com.amitshekhar.android:android-networking:1.0.0'
+
+    // Font
+    implementation "uk.co.chrisjenx:calligraphy:2.3.0"
+
+    // Size Handling Dimension
+    implementation "com.intuit.sdp:sdp-android:1.0.5"
+
+    // Image
+    implementation 'com.github.firdausmaulan:GlideSlider:1.3.2'
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
+
+    // Permission utils
+    implementation "rebus:permission-utils:2.0.7"
+
+    // Image picker
+    implementation "com.github.esafirm.android-image-picker:imagepicker:1.12.0"
+
+    // Camera
+    implementation "io.github.memfis19:annca:0.3.7"
+
+    // Compressor file
+    implementation "id.zelory:compressor:2.1.0"
+
+    // Sliding Up
+    implementation 'com.sothree.slidinguppanel:library:+'
+}

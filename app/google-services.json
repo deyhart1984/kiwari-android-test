@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "844119877041",
+    "firebase_url": "https://kiwari-realtime-chat.firebaseio.com",
+    "project_id": "kiwari-realtime-chat",
+    "storage_bucket": "kiwari-realtime-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:844119877041:android:892b0511dcbde9c266c990",
+        "android_client_info": {
+          "package_name": "com.realtimechat.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844119877041-d6kf9imvgk8mfrhdvn49q5hr2s9jpmds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmP63HbPwKcJP-hzSFkjpjM-RSRQPg2PI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844119877041-d6kf9imvgk8mfrhdvn49q5hr2s9jpmds.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
